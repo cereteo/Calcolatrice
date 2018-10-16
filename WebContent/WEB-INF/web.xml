@@ -15,19 +15,19 @@
     </servlet>
     <servlet>
         <servlet-name>Addition</servlet-name>
-        <servlet-class>it.objectmethod.tutorial.calcolatrice.Addition</servlet-class>
+        <servlet-class>it.objectmethod.tutorial.calcolatrice.AdditionServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Subtraction</servlet-name>
-        <servlet-class>it.objectmethod.tutorial.calcolatrice.Subtraction</servlet-class>
+        <servlet-class>it.objectmethod.tutorial.calcolatrice.SubtractionServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Moltiplication</servlet-name>
-        <servlet-class>it.objectmethod.tutorial.calcolatrice.Moltiplication</servlet-class>
+        <servlet-class>it.objectmethod.tutorial.calcolatrice.MoltiplicationServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Division</servlet-name>
-        <servlet-class>it.objectmethod.tutorial.calcolatrice.Division</servlet-class>
+        <servlet-class>it.objectmethod.tutorial.calcolatrice.DivisionServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>
