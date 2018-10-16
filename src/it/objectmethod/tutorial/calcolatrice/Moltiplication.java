@@ -10,27 +10,27 @@ import javax.servlet.http.HttpServletResponse;
 public class Moltiplication extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	     // reading the user input
+				String error = null;
+				double result = 0d;
 				try {
 					double n1 = Double.parseDouble(request.getParameter("number1"));
 			        double n2 = Double.parseDouble(request.getParameter("number2"));
 
-					double result = n1 * n2;	
-			        request.setAttribute("result", result);
-			        request.getRequestDispatcher("GUI.jsp").forward(request, response);
+					result = n1 * n2;	
+			        
 				}
 				catch(NumberFormatException e)
 				{
-					String error = "String to Number";
-					request.setAttribute("result", error);
-			        request.getRequestDispatcher("GUI.jsp").forward(request, response);
+					error = "String to Number";
 					e.printStackTrace();
 				}   
 				catch(Exception e)
 				{
-					String error = "Error";
-					request.setAttribute("result", error);
-			        request.getRequestDispatcher("GUI.jsp").forward(request, response);
+					error = "Error";
 					e.printStackTrace();
 				} 
+				
+				request.setAttribute("result", error == null? result:error);
+		        request.getRequestDispatcher("GUI.jsp").forward(request, response);
 	        }
 }
